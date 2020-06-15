@@ -5,10 +5,12 @@ import {createStackNavigator} from 'react-navigation-stack';
 import S2 from './screen2';
 var bg=require('./background.jpg');
 var im1=require('./download.jpg');
-export default class screen1 extends Component
+
+class screen1 extends Component
 {
     constructor(props) {
         super(props);
+        console.log("Screen 1");
       }
     show=()=>
     {
@@ -50,3 +52,5 @@ const styles = StyleSheet.create({
         textAlign:'center',
     }
 })
+
+export default screen1;

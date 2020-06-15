@@ -10,7 +10,7 @@ export default class splash extends Component
         super(props);
         setTimeout(()=>
         {
-            navigation.navigate("S1");
+            this.props.navigation.navigate("S1");
         },4000);
     }
     render()

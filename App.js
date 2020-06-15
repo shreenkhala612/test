@@ -4,29 +4,39 @@ import {createStackNavigator} from 'react-navigation-stack';
 
 
 import splash from './splash';
-import S1 from './screen1';
-import S2 from './screen2';
-import S3 from './screen3';
-import S4 from './screen4';
+import screen1 from './screen1';
+import screen2 from './screen2';
+import screen3 from './screen3';
+import screen4 from './screen4';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-const App=createStackNavigator(
+const AppNavigator=createStackNavigator(
     {
-        splash:{screen:splash,navigationOptions:{header:null}},
-        S1:{screen:S1,navigationOptions:{header:null}},
-        S2 :{screen :S2,navigationOptions:{header:null}},
-        S3 :{screen :S3,navigationOptions:{header:null}},
-        S4 :{screen :S4,navigationOptions:{header:null}},
-        initialRouteName: 'S1'
+        splash:{screen:splash, navigationOptions: {
+          header: null,
+      },},
+        S1:{screen:screen1, navigationOptions: {
+          header: null,
+      },},
+        S2 :{screen :screen2, navigationOptions: {
+          header: null,
+      },},
+        S3 :{screen :screen3, navigationOptions: {
+          header: null,
+      },},
+        S4 :{screen :screen4, navigationOptions: {
+          header: null,
+      }},
+        initialRouteName: 'splash'
       
     }
 );
-const AppContainer = createAppContainer(App);
-export default class App extends Component {
-    render() {
+const AppContainer = createAppContainer(AppNavigator);
+export default function App(){
+
       return (
-      <AppContainer navigation={props.navigation} />
-       
+
+      <AppContainer />
       );
-    }
-  }
-  
+
+}
