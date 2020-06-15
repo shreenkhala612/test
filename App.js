@@ -16,7 +16,7 @@ const App=createStackNavigator(
         S2 :{screen :S2,navigationOptions:{header:null}},
         S3 :{screen :S3,navigationOptions:{header:null}},
         S4 :{screen :S4,navigationOptions:{header:null}},
-        initialRouteName: 'splash'
+        initialRouteName: 'S1'
       
     }
 );
